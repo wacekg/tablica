@@ -1,10 +1,13 @@
 <h1>Szczegóły oferty</h1>
   <p>
-  <%= @offer.title %>
+  <%= "Przedmiot: #{@offer.title}" %>
   </p>
   <p>
-  <%= @offer.price %>
+  <%= "Cena: #{@offer.price}" %>
   </p>
   <p>
-  <%= @offer.content %>
+  <%= "Opis: #{@offer.content}" %>
   </p>
+  <h3>
+   <%= link_to 'Strona główna', offers_path %>
+  </h3>

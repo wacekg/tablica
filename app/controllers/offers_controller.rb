@@ -18,7 +18,7 @@ class OffersController < ApplicationController
   end
   def destroy
     @offer.destroy
-    redirect_to action "index"
+    redirect_to action: "index"
   end
 
   private

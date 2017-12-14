@@ -1,8 +1,12 @@
 <h2>Tablica ogłoszeń</h2>
   <h3>
-    <%= link_to 'Dodaj nową ofertę' %>
+    <%= link_to 'Dodaj nową ofertę', new_offer_path%>
   </h3>
-  <% @offer.each do |offer| %>
+  <% @offers.each do |offer| %>
     <h4>
+      <%= link_to "Sprzedam #{offer.title}, Cena #{offer.price}", offer_path(offer) %>
+      <%= link_to 'Pokaż', offer_path(offer) %>
+      <%= link_to 'Zmień', edit_offer_path(offer) %>
+      <%= link_to 'Usuń', offer_path(offer), method: :delete %>
     </h4>
   <% end %>
